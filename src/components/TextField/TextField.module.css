@@ -1,0 +1,15 @@
+.error {
+  color: #ff0000;
+  font-weight: bolder;
+  font-size: 0.7rem;
+}
+.label {
+  font-size: 0.7rem;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #00000070;
+  margin-bottom: 5px;
+}

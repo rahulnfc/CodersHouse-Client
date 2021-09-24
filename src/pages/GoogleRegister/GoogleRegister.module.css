@@ -1,0 +1,114 @@
+.GoogleRegister {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo {
+  width: 20rem;
+}
+.title {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: center;
+  text-size-adjust: 100%;
+}
+.googleCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.profilePicture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+.username {
+  font-size: 0.7rem;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  color: #000000;
+  text-size-adjust: 100%;
+}
+.email {
+  font-size: 0.7rem;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  color: #00000070;
+  text-size-adjust: 100%;
+}
+.label {
+  font-size: 0.7rem;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #00000070;
+  margin-bottom: 5px;
+}
+.input {
+  font-size: 0.7rem;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #00000095;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.agreement,
+.alreadyHaveAccount {
+  font-size: 0.7rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+.notyou {
+  font-size: 0.7rem;
+  color: #0066ff;
+  font-weight: bolder;
+  margin: 10px 0px 10px 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.agreement .link {
+  color: #0066ff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.alreadyHaveAccount .link {
+  color: #0066ff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.error {
+  color: #ff0000;
+  font-weight: bolder;
+  font-size: 0.7rem;
+}
+.link {
+  color: #0066ff;
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration: none;
+}

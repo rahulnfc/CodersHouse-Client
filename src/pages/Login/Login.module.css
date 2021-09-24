@@ -1,0 +1,61 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;    
+  transform: translate(-50%, -50%);
+}
+.logo {
+  width: 20rem;
+}
+.title {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: center;
+  text-size-adjust: 100%;
+}
+.input {
+  font-size: 0.7rem;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #00000095;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.forgotPassword {
+  color: #0066ff;
+  font-weight: bolder;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.JoinNow {
+  font-size: 0.7rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+.JoinNow .link {
+  color: #0066ff;
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration: none;
+}
+.error {
+  color: #ff0000;
+  font-weight: bolder;
+  font-size: 0.7rem;
+}
