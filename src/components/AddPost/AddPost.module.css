@@ -1,0 +1,72 @@
+.addPostContainer {
+  width: 39rem;
+  height: 13rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fafafa;
+  color: #000;
+  border-radius: 10px;
+  border: 2px solid #4f80e1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.photoAndInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 3.2rem;
+}
+.profilePhoto {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid hsl(220, 71%, 60%);
+}
+.postInput {
+  width: 60%;
+  height: 1rem;
+  border: 1px solid #4f80e1;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.postInput:focus {
+  outline: 2px solid #4f80e1
+}
+.postButton {
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  margin: 0;
+  border-radius: 5px;
+  background-color: #4f80e1;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.postButton:hover {
+  color: #000;
+  background-color: #3f6cc9;
+}
+.postButton:focus {
+  outline: none;
+}
+.addPostButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+}
+.addPost{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.7rem;
+}

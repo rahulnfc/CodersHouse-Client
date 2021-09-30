@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
@@ -11,9 +11,16 @@ const server = 'http://localhost:3001'
 
 
 const Register = () => {
+    const history = useHistory()
+    useEffect(() => {
+        const token = localStorage.getItem('userjwt')
+        if (token) {
+            history.push('/')
+        }
+    })
+
     const [emailExists, setEmailExists] = useState(false)
     const [phoneExists, setPhoneExists] = useState(false)
-    const history = useHistory()
 
     const validate = Yup.object({
         username: Yup.string()

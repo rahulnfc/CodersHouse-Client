@@ -8,7 +8,7 @@ const TextField = ({ label, ...props }) => {
     <>
       <label htmlFor={field.name} className={styles.label} >{label}</label>
       <input {...field} {...props} />
-      <ErrorMessage component="div" name={field.name} className={styles.error} />
+      <ErrorMessage component="div" name={field.name} className={styles.error} meta={meta} />
     </>
   );
 }
