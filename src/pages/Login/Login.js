@@ -8,15 +8,16 @@ import styles from './Login.module.css'
 import TextField from '../../components/TextField/TextField'
 import axios from 'axios'
 import Cookies from 'universal-cookie';
+const cookies = new Cookies()
 const server = "http://localhost:3001"
-
 
 const Login = () => {
     const history = useHistory()
     useEffect(() => {
-        const token = document.cookie.split('=')[1]
+        const token = cookies.get('userjwt')
+        console.log(token)
         if (token) {
-            history.push('/')
+            history.push('/')   
         }
     })
 
@@ -49,13 +50,15 @@ const Login = () => {
                 axios.post(`${server}/auth/login`, data)
                     .then(res => {
                         // success and store the token to cookies
-                        const cookies = new Cookies()
+                        console.log(res.data);
                         cookies.set('userjwt', res.data.token)
+                        cookies.set('userjwtrefresh', res.data.refreshToken)
                         localStorage.setItem('userId', res.data.userId)
                         localStorage.setItem('isAuthenticated', true)
                         history.push('/')
                     }).catch((error) => {
                         const response = error.response.data
+                        console.log(response);
                         if (response.emailError) {
                             // email error
                             setEmailError(true)

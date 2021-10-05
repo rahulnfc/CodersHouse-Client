@@ -7,15 +7,17 @@ import Card from '../../components/Card/Card'
 import styles from './Register.module.css'
 import TextField from '../../components/TextField/TextField'
 import axios from 'axios'
+import Cookies from 'universal-cookie';
+const cookies = new Cookies()
 const server = 'http://localhost:3001'
 
 
 const Register = () => {
     const history = useHistory()
     useEffect(() => {
-        const token = localStorage.getItem('userjwt')
+        const token = cookies.get('userjwt')
         if (token) {
-            history.push('/')
+            history.push('/')   
         }
     })
 
