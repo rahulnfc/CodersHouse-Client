@@ -9,7 +9,6 @@ import styled from 'styled-components'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
 const cookies = new Cookies()
-// import Navigation from '../../Navigation'
 // import ModalComp from '../../components/Modal/Modal'
 const server = 'http://localhost:3001'
 
@@ -63,7 +62,6 @@ const Home = () => {
             <Navbar />
             <Container>
                 <MyProfileCard />
-                {/* <Navigation /> */}
                 <Middlebar>
                     <AddPost />
                     <Posts />

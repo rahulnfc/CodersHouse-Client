@@ -99,6 +99,7 @@ export const Post = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     & img {
         width: 1.5rem;
         height: 1.5rem;

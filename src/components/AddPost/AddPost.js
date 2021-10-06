@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Formik, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { AddPostContainer, PhotoAndInput, AddPostButtons, Post } from './AddPost.styles'
@@ -8,9 +8,7 @@ const server = 'http://localhost:3001'
 const AddPost = () => {
     const validate = Yup.object({
         textPost: Yup.string()
-            .min(5, 'Post must be at least 5 characters long')
-            .max(255, 'Post must be less than 255 characters long')
-            .required('Post is required'),
+            .required('Please enter anything on your mind')
     })
     return (
         <Formik
@@ -21,11 +19,12 @@ const AddPost = () => {
                 const userId = localStorage.getItem('userId')
                 const post = {
                     userId: userId,
-                    textPost: values.textPost
+                    postText: values.textPost
                 }
-                console.log(post)
+                values.textPost = ''
                 axios.post(`${server}/posts/textPost`, post).then(res => {
-                    console.log(res.data)
+                    console.log(res.data.post)
+                    document.getElementById('textPost').value = ''
                 }).catch(err => {
                     console.log(err)
                 })
@@ -33,22 +32,20 @@ const AddPost = () => {
         >
             {formik => (
                 <AddPostContainer>
-                    <PhotoAndInput>
+                    <PhotoAndInput as={Form}>
                         <img src="/assets/images/megha.jpeg" alt="Megha" />
-                        <Form>
-                            <input
-                                type="text"
-                                id="textPost"
-                                name="textPost"
-                                placeholder="What's on your mind?"
-                                onChange={formik.handleChange}
-                                value={formik.values.textPost}
-                            />
-                            <ErrorMessage name="textPost" component="div" style={{ color: 'red' }} />
-                            <button type="submit">Post</button>
-                        </Form>
+                        <input
+                            type="text"
+                            id="textPost"
+                            name="textPost"
+                            placeholder="What's on your mind?"
+                            onChange={formik.handleChange}
+                            value={formik.values.textPost}
+                        />
+                        <button type="submit">Post</button>
                         {console.log(formik.values)}
                     </PhotoAndInput>
+                    <ErrorMessage name="textPost" component="div" style={{ color: 'red', alignSelf: 'center' }} />
                     <AddPostButtons>
                         <Post>
                             <img src="/assets/images/gallery.png" alt="Gallery" />
