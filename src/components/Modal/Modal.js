@@ -1,30 +1,22 @@
-import React from 'react';
-import { Button } from 'rsuite';
-import PlaceholderParagraph from 'rsuite/esm/Placeholder/PlaceholderParagraph';
+import React from "react";
+import { Modal } from "rsuite";
+import ImagePost from "../AddPost/ImagePost";
 
-const Modal = (props) => {
-    const { open, handleClose, title, children } = props;
-    return (
-        <div className="modal-container">
-            <Modal open={open} onClose={handleClose}>
-                <Modal.Header>
-                    <Modal.Title>{title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <PlaceholderParagraph />
-                    {children}
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button onClick={handleClose} appearance="primary">
-                        Ok
-                    </Button>
-                    <Button onClick={handleClose} appearance="subtle">
-                        Cancel
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </div>
-    )
-}
+const ModalComp = (props) => {
+  const { open, handleClose, title, children } = props;
+  return (
+    <div className="modal-container">
+      <Modal open={open} onClose={handleClose}>
+        <Modal.Header>
+          <Modal.Title>{title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {children}
+          <ImagePost />
+        </Modal.Body>
+      </Modal>
+    </div>
+  );
+};
 
-export default Modal
+export default ModalComp;

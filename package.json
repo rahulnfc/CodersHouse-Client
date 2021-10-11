@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.4",
     "customize-cra": "^1.0.0",
+    "form-data": "^4.0.0",
     "formik": "^2.2.9",
     "less": "^4.1.1",
     "less-loader": "7",
