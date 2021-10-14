@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "rsuite";
-import ImagePost from "../AddPost/ImagePost";
+import ImagePost from "../AddPost/ImagePost/ImagePost";
 
 const ModalComp = (props) => {
   const { open, handleClose, title, children } = props;

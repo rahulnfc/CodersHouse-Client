@@ -65,15 +65,15 @@ const AddPost = () => {
               <img src="/assets/images/gallery.png" alt="Gallery" />
               <p>Gallery</p>
             </Post>
-            <Post onClick={handleOpen} key="videoPost">
+            <Post key="videoPost">
               <img src="/assets/images/video-camera.png" alt="VideoCamera" />
               <p>Video</p>
             </Post>
-            <Post onClick={handleOpen} key="eventPost">
+            <Post key="eventPost">
               <img src="/assets/images/calendar.png" alt="Calendar" />
               <p>Event</p>
             </Post>
-            <Post onClick={handleOpen} key="articlePost">
+            <Post key="articlePost">
               <img src="/assets/images/article.png" alt="Article" />
               <p>Article</p>
             </Post>

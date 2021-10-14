@@ -41,6 +41,7 @@ export const PostCard = styled.div`
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-left: 3rem;
     @media screen and (max-width:540px){
         width: 80%;
     }
@@ -101,6 +102,7 @@ export const PostBody = styled.div`
     & p{
         font-size: 1.2rem;
         color: #000;
+        margin-bottom: 1rem;
     }
     @media screen and (max-width:540px){
         font-size: 0.8rem;
